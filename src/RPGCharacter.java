@@ -10,4 +10,6 @@ public class RPGCharacter {
 
      The program should run using dialog boxes and the output should show ALL the character's stats including a name.
      */
+
+
 }
