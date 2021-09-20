@@ -1,11 +1,11 @@
 import javax.swing.JOptionPane;
+import java.text.DecimalFormat;
 
 public class Sales {
 
     public static void main(String[] args) {
 
         double salePrice;
-        double originalPrice;
         int discountAsInt;
         int quantity;
         int salesTax;
@@ -15,10 +15,16 @@ public class Sales {
         quantity = Integer.parseInt(JOptionPane.showInputDialog("How many are you buying?"));
         salesTax = Integer.parseInt(JOptionPane.showInputDialog("What is the sales tax?"));
 
-        double originalPrice = salePrice * quantity;
-        double discount = (discountAsInt  / 100) * originalPrice;
+        double startPrice = salePrice * quantity;
+        double discount = (discountAsInt  / 100) * startPrice;
         double subTotal = (salePrice * quantity) - discount;
-        double taxTotal =
+        double taxTotal = (salesTax / 100) * subTotal;
+        double totalCost = subTotal + taxTotal;
+
+        DecimalFormat round = new DecimalFormat("#,###.00");
+        JOptionPane.showMessageDialog(null, "Your total is: " + round.format(totalCost));
+
+
     }
 
 }
