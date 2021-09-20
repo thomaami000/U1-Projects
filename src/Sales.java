@@ -5,6 +5,7 @@ public class Sales {
     public static void main(String[] args) {
 
         double salePrice;
+        double originalPrice;
         int discountAsInt;
         int quantity;
         int salesTax;
@@ -14,9 +15,10 @@ public class Sales {
         quantity = Integer.parseInt(JOptionPane.showInputDialog("How many are you buying?"));
         salesTax = Integer.parseInt(JOptionPane.showInputDialog("What is the sales tax?"));
 
-        double discount = (salePrice * quantity) / 100;
-        double subTotal = ;
-        double
+        double originalPrice = salePrice * quantity;
+        double discount = (discountAsInt  / 100) * originalPrice;
+        double subTotal = (salePrice * quantity) - discount;
+        double taxTotal =
     }
 
 }
